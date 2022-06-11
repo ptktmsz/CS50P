@@ -1,10 +1,10 @@
 def main():
 
     text_to_convert = input("Input: ")
-    print("Output: ", convert(text_to_convert))
+    print("Output:", convert(text_to_convert))
 
 def is_vowel(letter):
-    if letter.lower() == "a" or letter.lower() == "e" or letter.lower() == "i" or letter.lower() == "o" or letter.lower() == "u":
+    if letter.lower() in ["a", "e", "i", "o", "u"]:
         return True
     else:
         return False

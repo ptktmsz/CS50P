@@ -1,0 +1,28 @@
+from pyfiglet import Figlet
+import sys
+import random
+
+figletfonts = ["double", "acrobatic", "mayhem_d", "fair_mea", "charset_", "coinstak", "future_8", "skateroc", "rastan__", "skateord", "relief", "demo_2__", "whimsy", "lockergnome", "charact5", "platoon_", "5x7", "computer", "standard", "joust___", "catwalk", "b_m__200", "letterw3", "invita", "cricket", "courbi", "master_o", "script", "future_7", "coil_cop", "utopiabi", "atc_____", "atc_gran", "xbritei", "rot13", "runic", "octal", "p_skateb", "caligraphy", "peaks", "stealth_", "pod_____", "brite", "char2___", "rally_s2", "asc_____", "convoy__", "sansi", "spc_demo", "big", "contrast", "tsn_base", "faces_of", "battle_s", "helvi", "maxfour", "sansb", "char1___", "doh", "war_of_w", "banner4", "bigchief", "tsalagi", "isometric1", "char4___", "xsbookbi", "isometric4", "stellar", "goofy", "arrows", "moscow", "dwhistled", "tty", "charact2", "relief2", "z-pilot_", "rozzo", "f15_____", "demo_1__", "tecrvs__", "battlesh", "hypa_bal", "ebbs_1__", "cyberlarge", "letter_w", "ripper!_", "os2", "ti_pan__", "future_2", "5lineoblique", "c2______", "xhelv", "bubble", "clr7x8", "eftitalic", "kik_star", "chartr", "crawford", "clr5x6", "rowancap", "future_4", "mike", "pebbles", "advenger", "twin_cob", "decimal", "rockbox_", "lexible_", "fireing_", "basic", "street_s", "raw_recu", "dotmatrix", "road_rai", "madrid", "space_op", "assalt_m", "clr4x6", "5x8", "hills___", "chunky", "rad_phan", "shadow", "xsans", "fbr1____", "ts1_____", "a_zooloo", "ntgreek", "banner3", "grand_pr", "subteran", "rectangles", "bubble_b", "fbr2____", "smslant", "sbooki", "bell", "new_asci", "rally_sp", "fbr12___", "platoon2", "chartri", "mshebrew210", "rainbow_", "short", "vortron_", "xbritebi", "odel_lak", "eftichess", "ttyb", "helv", "sblood", "outrun__", "taxi____", "xtty", "helvb", "sbookbi", "devilish", "3x5", "graffiti", "small", "xcourbi", "bubble__", "fbr_tilt", "eftifont", "banner3-D", "fp1_____", "tiles", "fuzzy", "ascii___", "ogre", "beer_pub", "inc_raw_", "cursive", "xttyb", "pacos_pe", "pyramid", "cosmic", "baz__bil", "ticks", "xhelvbi", "utopiab", "pawp", "wavy", "runyc", "trek", "starwars", "hades___", "broadway", "morse", "kban", "linux", "yie-ar__", "alligator", "radical_", "shimrod", "tinker-toy", "c1______", "lcd", "rampage_", "poison", "flyn_sh", "larry3d", "pepper", "clr6x6", "d_dragon", "clb6x10", "jerusalem", "smscript", "pawn_ins", "mirror", "6x9", "xsbookb", "digital", "xchartri", "type_set", "heavy_me", "avatar", "yie_ar_k", "stampatello", "aquaplan", "roman___", "britei", "demo_m__", "rci_____", "graceful", "clr7x10", "smisome1", "unarmed_", "slscript", "stencil2", "skate_ro", "future_6", "stencil1", "courb", "fbr_stri", "hollywood", "script__", "nvscript", "modern__", "magic_ma", "fantasy_", "deep_str", "clr6x8", "xsbooki", "epic", "lazy_jon", "isometric2", "finalass", "t__of_ap", "super_te", "panther_", "usa_pq__", "alphabet", "twopoint", "sbookb", "straight", "charact6", "notie_ca", "ok_beer_", "star_war", "eca_____", "italic", "tec1____", "clb8x8", "katakana", "ivrit", "greek", "xsansi", "usa_____", "characte", "eftipiti", "contessa", "charact1", "rok_____", "smshadow", "tsm_____", "3-d", "e__fist_", "cour", "rev", "xcouri", "binary", "term", "eftiwater", "drpepper", "clr8x10", "helvbi", "house_of", "phonix__", "sbook", "heroboti", "threepoint", "slant", "thick", "64f1____", "future_5", "sketch_s", "timesofl", "charact3", "thin", "etcrvs__", "c_ascii_", "clr5x8", "roman", "mcg_____", "future_1", "char3___", "slide", "tubular", "ebbs_2__", "isometric3", "xsbook", "fairligh", "smkeyboard", "britebi", "hyper___", "ucf_fan_", "tengwar", "mini", "nancyj-underlined", "clr5x10", "kgames_i", "r2-d2___", "1943____", "tomahawk", "univers", "tec_7000", "eftiwall", "cybermedium", "times", "charact4", "rounded", "colossal", "jazmine", "calgphy2", "cybersmall", "ghost_bo", "briteb", "serifcap", "zig_zag_", "clr6x10", "barbwire", "letters", "tanja", "hex", "xcourb", "stacey", "block", "nancyj", "couri", "utopia", "rad_____", "gauntlet", "diamond", "gradient", "weird", "ticksslant", "fourtops", "italics_", "marquee", "future_3", "druid___", "nfi1____", "mig_ally", "tav1____", "clr8x8", "alligator2", "gothic__", "utopiai", "puffy", "defleppard", "smtengwar", "o8", "top_duck", "sansbi", "caus_in_", "stop", "eftirobot", "fp2_____", "fraktur", "speed", "6x10", "mnemonic", "clb8x10", "npn_____", "mad_nurs", "zone7___", "usaflag", "high_noo", "sans", "nancyj-fancy", "c_consen", "doom", "funky_dr", "home_pak", "banner", "cosmike", "lean", "xsansbi", "krak_out", "xtimes", "green_be", "sm______", "xhelvb", "asslt__m", "dcs_bfmo", "cli8x8", "xbriteb", "xsansb", "com_sen_", "xcour", "xhelvi", "fender", "xbrite", "nipples", "ugalympi", "trashman", "triad_st", "p_s_h_m_", "bulbhead", "4x4_offr", "xchartr", "gothic", "tombstone"]
+
+f = Figlet()
+
+if len(sys.argv) == 1:
+    # Outputs text in a random font
+    text = input("Input: ")
+    f.setFont(font=random.choice(figletfonts))
+    print("Output: ", f.renderText(text))
+
+elif len(sys.argv) == 3:
+    # Outputs text in a specified font
+    if sys.argv[1] == "-f" or sys.argv[1] == "-font":
+        if sys.argv[2] in figletfonts:
+            text = input("Input: ")
+            f.setFont(font=sys.argv[2])
+            print("Output: ", f.renderText(text))
+        else:
+            sys.exit("Unknown font")
+    else:
+        sys.exit("Unkown first command-line argument")
+
+else:
+    sys.exit("Input should have 0 or 2 command-line arguments")
